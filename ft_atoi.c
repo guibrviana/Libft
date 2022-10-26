@@ -3,18 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gubranco <gubranco@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gubranco <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:43:40 by gubranco          #+#    #+#             */
-/*   Updated: 2022/10/24 15:56:39 by gubranco         ###   ########.fr       */
+/*   Updated: 2022/10/26 21:34:32 by gubranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(char *str)
+#include "libft.h"
+#include <stdlib.h>
+
+int	ft_atoi(const char *str)
 {
-	int i;
-	int res;
-	int sig;
+	int	i;
+	int	res;
+	int	sig;
 
 	i = 0;
 	res = 0;
@@ -23,3 +26,7 @@ int ft_atoi(char *str)
 		i++;
 	while ()
 }
+
+/*
+The function atoi converts the string argument str to an integer (type int).
+*/

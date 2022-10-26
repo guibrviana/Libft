@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gubranco <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 15:31:55 by gubranco          #+#    #+#             */
-/*   Updated: 2022/10/26 21:29:45 by gubranco         ###   ########.fr       */
+/*   Created: 2022/10/26 19:30:38 by gubranco          #+#    #+#             */
+/*   Updated: 2022/10/26 21:20:04 by gubranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <ctype.h>
+#include <stdio.h>
 
-size_t	ft_strlen(const char *str)
+int	ft_isalpha(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	return (0);
 }
 
-/*
-int	main(void)
+/*int	main(void)
 {
-	printf("%d", ft_strlen("guilherme"));
+	char c = 'a';
+	printf("%d", ft_isalpha(c));
 	return (0);
 }
 */
 
-/*
-The strlen() function takes a string as an argument and returns its length. 
-The returned value is of type size_t (an unsigned integer type).
-*/
+/* The isalpha() function checks whether a character is an 
+alphabet (a to z and A-Z) or not. If a character passed to 
+isalpha() is an alphabet, it returns a non-zero integer, if 
+not it returns 0. */

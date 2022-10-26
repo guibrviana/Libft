@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gubranco <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 15:31:55 by gubranco          #+#    #+#             */
-/*   Updated: 2022/10/26 21:29:45 by gubranco         ###   ########.fr       */
+/*   Created: 2022/10/26 21:21:29 by gubranco          #+#    #+#             */
+/*   Updated: 2022/10/26 21:50:52 by gubranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <ctype.h>
 #include "libft.h"
+#include <stdio.h>
 
-size_t	ft_strlen(const char *str)
+int	ft_isdigit(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-/*
-int	main(void)
-{
-	printf("%d", ft_strlen("guilherme"));
+	if (c >= '0' && c <= '9')
+		return (1);
 	return (0);
 }
-*/
 
-/*
-The strlen() function takes a string as an argument and returns its length. 
-The returned value is of type size_t (an unsigned integer type).
-*/
+/*int	main(void)
+{
+	char c = '8';
+	printf("%d", ft_isdigit(c));
+	return(0);
+}*/
+/* Function isdigit() takes a single argument in the form of 
+an integer and returns the value of type int. */
