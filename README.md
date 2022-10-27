@@ -2,7 +2,13 @@
 
 This is my first project as a 42 Lisboa student, where I had to create a library containing multiple libc re-coded functions and also create new ones that are not included in the standard C library.
 
-So, the project was divided in 3 parts. On the first part, I re-coded some functions of the standard C library, following the steps in their man, making them have the same behaviors and prototypes as the original ones. All of their names had to start by the prefix "ft_XXX.c", according to the pdf project's instructions. Meanwhile, on the second part, I coded some additional functions that are not present in the standard C library, or are included in a different form. And on the last part, I worked with the concept of linked list functions, as a bonus for receiving extra points in my project's evaluation.
+So, the project was divided in 3 parts. 
+
+In the first part, I re-coded some functions of the standard C library, following the steps in their man, making them have the same behaviors and prototypes as the original ones. All of their names had to start by the prefix "ft_XXX.c", according to the pdf project's instructions. 
+
+Meanwhile, in the second part, I coded some additional functions that are not present in the standard C library, or are included in a different form. 
+
+And in the last part, I worked with the concept of linked list functions, as a bonus for receiving extra points in my project's evaluation.
 
 To do these steps, I worked with 3 different types of files, them being:
 
