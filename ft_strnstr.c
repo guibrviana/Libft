@@ -6,7 +6,7 @@
 /*   By: gubranco <gubranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 19:01:41 by gubranco          #+#    #+#             */
-/*   Updated: 2022/11/03 19:23:25 by gubranco         ###   ########.fr       */
+/*   Updated: 2022/11/04 18:22:03 by gubranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *dst, const char *src, size_t len)
 		return (dst);
 	return (0);
 }
+
+REVER
 
 /* The function locates the first occurrence of the null-terminated string 
 src in the string dst, where not more than len characters are searched. 

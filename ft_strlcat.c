@@ -6,7 +6,7 @@
 /*   By: gubranco <gubranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:11:54 by gubranco          #+#    #+#             */
-/*   Updated: 2022/11/04 18:19:52 by gubranco         ###   ########.fr       */
+/*   Updated: 2022/11/04 18:47:04 by gubranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[j + i] = src[i];
 		i++;
 	}
-	if (i < dstsize)
+	if (j < dstsize)
 		dst[j + i] = '\0';
 	return (i + j);
 }
