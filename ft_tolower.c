@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gubranco <gubranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 12:36:29 by gubranco          #+#    #+#             */
-/*   Updated: 2022/11/02 12:35:59 by gubranco         ###   ########.fr       */
+/*   Created: 2022/11/02 11:14:22 by gubranco          #+#    #+#             */
+/*   Updated: 2022/11/02 11:31:37 by gubranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_tolower(int c)
 {
-	int	i;
-	int	res;
-	int	sig;
-
-	i = 0;
-	res = 0;
-	sig = 1;
-	while ((str[i] == 32) || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			sig *= -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = (res * 10) + (str[i] - '0');
-		i++;
-	}
-	return (res * sig);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
 
-/* converts the string argument str to an integer (type int). */
+/* The function converts an upper-case letter to the corresponding
+lower-case letter, returning it. If the argument is not an upper-case
+letter, it is returned unchanged.*/
