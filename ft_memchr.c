@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gubranco <gubranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 12:09:13 by gubranco          #+#    #+#             */
-/*   Updated: 2022/11/14 14:52:04 by gubranco         ###   ########.fr       */
+/*   Created: 2022/11/14 19:31:25 by gubranco          #+#    #+#             */
+/*   Updated: 2022/11/14 19:44:32 by gubranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memchr(const void *b, int c, size_t len)
 {
-	
+	unsigned char	*str;
+	size_t			i;
+
+	i = 0;
+	str = (unsigned char *)b;
+	while (i < len)
+	{
+		if (str[i] == (unsigned char)c)
+			return ((unsigned char *)b + i);
+		i++;
+	}
+	return (0);
 }
 
-/* The memmove() function copies len bytes from string src to string dst.
-The two strings may overlap; the copy is always done in a non-destructive
-manner (using a buffer). The difference between this and memcpy is when 
-you have overlaping memory bytes (https://www.youtube.com/watch?v=nFl1cNXk85s). 
-It returns the original value of dst.*/
+/* The memchr() function locates the first occurrence of c (converted to an
+unsigned char) in string b. It returns a pointer to the byte located, 
+or NULL if no such byte exists within len bytes.*/
