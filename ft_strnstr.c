@@ -6,7 +6,7 @@
 /*   By: gubranco <gubranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 19:01:41 by gubranco          #+#    #+#             */
-/*   Updated: 2022/11/10 19:30:45 by gubranco         ###   ########.fr       */
+/*   Updated: 2022/11/10 19:59:52 by gubranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,20 @@ char	*ft_strnstr(const char *dst, const char *src, size_t len)
 	i = 0;
 	j = 0;
 	n = ft_strlen(src);
-	if (src[i] == '\0')
+	if (n == 0)
 		return ((char *)dst);
 	while (dst[i] != '\0' && i < len)
 	{
-		j = 0;
-		while (dst[i + j] == src[j] && (i + j) < len && src[j] && dst[i + j])
-			j++;
-		if (j == n)
-			return ((char *)&dst[i]);
+		if (dst[i] == src[j])
+		{
+			while (dst[i + j] == src[j] && (i + j) < len)
+			{
+				if (src[j + 1] == '\0')
+					return ((char *)&dst[i]);
+				j++;
+			}
+			j = 0;
+		}
 		i++;
 	}
 	return (0);

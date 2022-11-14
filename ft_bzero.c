@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gubranco <gubranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 19:24:31 by gubranco          #+#    #+#             */
-/*   Updated: 2022/11/14 12:01:37 by gubranco         ###   ########.fr       */
+/*   Created: 2022/11/14 11:20:20 by gubranco          #+#    #+#             */
+/*   Updated: 2022/11/14 12:01:42 by gubranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *dest, int c, size_t len)
+void	ft_bzero(void *b, size_t len)
 {
-	size_t			i;
 	unsigned char	*str;
+	size_t			i;
 
 	i = 0;
-	str = (unsigned char *)dest;
+	str = (unsigned char *)b;
 	while (i < len)
 	{
-		str[i] = c;
+		str[i] = 0;
 		i++;
 	}
-	return (dest);
 }
 
-/* The memset() function writes len bytes of value c (converted to an
-unsigned char) to the string dest. Undefined behaviour from memset(),
-resulting from storage overflow, will occur if len is greater than the
-the length of buffer dest. The behaviour is also undefined if dest is an
-invalid pointer. It returns its first argument. */
+/*  The bzero() function writes len zero bytes to the string b.  If len is
+zero, bzero() does	nothing. */

@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gubranco <gubranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 19:24:31 by gubranco          #+#    #+#             */
-/*   Updated: 2022/11/14 12:01:37 by gubranco         ###   ########.fr       */
+/*   Created: 2022/11/14 11:25:30 by gubranco          #+#    #+#             */
+/*   Updated: 2022/11/14 12:03:13 by gubranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *dest, int c, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
+	unsigned char	*dst0;
+	unsigned char	*src0;
 	size_t			i;
-	unsigned char	*str;
 
+	src0 = (unsigned char *)src;
+	dst0 = (unsigned char *)dst;
 	i = 0;
-	str = (unsigned char *)dest;
 	while (i < len)
 	{
-		str[i] = c;
+		dst0[i] = src0[i];
 		i++;
 	}
-	return (dest);
+	return (dst);
 }
 
-/* The memset() function writes len bytes of value c (converted to an
-unsigned char) to the string dest. Undefined behaviour from memset(),
-resulting from storage overflow, will occur if len is greater than the
-the length of buffer dest. The behaviour is also undefined if dest is an
-invalid pointer. It returns its first argument. */
+/*  The memcpy() function copies len bytes from string src to string dst.  If
+src and dst overlap, the results are not defined.
+It returns the original	value of dst.*/
